@@ -1,0 +1,29 @@
+.container {
+  border: 0.5px solid #cacfd4;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+.saved-button {
+  border: 0.5px solid #cacfd4;
+  border-radius: 10px;
+}
+
+.pay-button {
+  border: 0.5px solid #cacfd4;
+  border-radius: 10px;
+}
+
+.paypal {
+    padding: 5px;
+}
+
+.paypal-button {
+  border: 0.5px solid #cacfd4;
+  border-radius: 10px;
+}
+
+.google-button {
+  border: 0.5px solid #cacfd4;
+  border-radius: 10px;
+}
