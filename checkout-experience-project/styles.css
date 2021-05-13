@@ -14,8 +14,22 @@
   border-radius: 10px;
 }
 
+.divider {
+  border-top: 1px solid #cacfd4;
+  display: flex;
+  height: 1px;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 0 2em 0;
+  text-align: center;
+}
+.divider span {
+  background: white none repeat scroll 0 0;
+  padding: 0.1em 1.5em;
+}
+
 .paypal {
-    padding: 5px;
+  padding: 5px;
 }
 
 .paypal-button {
