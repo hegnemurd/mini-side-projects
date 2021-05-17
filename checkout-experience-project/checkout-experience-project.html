@@ -19,42 +19,47 @@
   </head>
   <body>
     <!-- transition/animation and/or settimeout -->
-    <div class="container">
-      <h4>£129.99</h4>
-      <div class="quick-pay-container">
-        <div class="saved-card">
-          <button class="saved-button">
-            <i class="bi bi-credit-card"></i> Saved Card **** 4321
-            <input
-              class="form-check-input"
-              type="radio"
-              name="flexRadioDefault"
-              id="flexRadioDefault1"
-            />
-          </button>
+    <!-- <div class="loader"> -->
+    <div class="parent">
+      <div class="container">
+        <h4>£129.99</h4>
+        <div class="quick-pay-container">
+          <div class="saved-card">
+            <button class="saved-button">
+              <i class="bi bi-credit-card"></i> Saved Card **** 4321
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="flexRadioDefault1"
+              />
+            </button>
+          </div>
+          <div class="one-click-pay">
+            <button class="pay-button" onclick="loader()">
+              One-Click Pay <i class="bi bi-lock"></i>
+            </button>
+          </div>
         </div>
-        <div class="one-click-pay">
-          <button class="pay-button" onclick="oneClickPay()">
-            One-Click Pay <i class="bi bi-lock"></i>
-          </button>
+        <div class="divider">
+          <span> OR</span>
         </div>
-      </div>
-      <div class="divider">
-        <span> OR</span>
-      </div>
-      <div class="integrations">
-        <div class="paypal">
-          <button class="paypal-button">PayPal</button>
+        <div class="integrations">
+          <div class="paypal">
+            <button class="paypal-button">PayPal</button>
+          </div>
+          <div class="google">
+            <button class="google-button">
+              <span class="blue">G</span><span class="red">o</span
+              ><span class="yellow">o</span><span class="blue">g</span
+              ><span class="green">l</span><span class="red">e</span> Pay
+            </button>
+          </div>
         </div>
-        <div class="google">
-          <button class="google-button">
-            <span class="blue">G</span><span class="red">o</span
-            ><span class="yellow">o</span><span class="blue">g</span
-            ><span class="green">l</span><span class="red">e</span> Pay
-          </button>
-        </div>
+        <div class="loader">loading icon spinning...</div>
       </div>
     </div>
+    <!-- </div> -->
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
