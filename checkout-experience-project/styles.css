@@ -11,12 +11,12 @@
 }
 
 .container,
-.loader {
+#loader {
   width: 100%;
   height: 100%;
 }
 
-.loader {
+#loader {
   display: none;
   top: 0;
   left: 0;
@@ -24,31 +24,36 @@
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 2;
+  position: absolute;
+  border-radius: inherit;
 }
 
-/* .container {
-  border: 0.5px solid #dde1e6;
-  border-radius: 15px;
-  padding: 1.5rem;
-  margin: 5%;
-  width: 330px;
-  height: 350px;
-  text-align: center;
-  box-shadow: -10px 20px 30px 10px #909296;
-} */
+.loader-2 {
+  border: 6px solid #f3f3f3; /* Light grey */
+  border-top: 6px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+  position: absolute;
+  left: 41%;
+  top: 42%;
+}
 
-/* .loader {
-  background: #000000;
-  opacity: 0.3;
-  width: 330px;
-  height: 350px;
-} */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 .saved-button {
   border: 0.5px solid #f7f5f5;
   border-radius: 10px;
   margin: 1rem;
-  padding: 0.5rem 1.64rem;
+  padding: 0.5rem 1.01rem;
   background-color: #f7f5f5;
   /* background: rgb(85, 86, 88); */
 }

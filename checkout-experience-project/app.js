@@ -1,3 +1,3 @@
 function loader() {
-  document.getElementsByClassName("loader").style.display = "block";
+  document.getElementById("loader").style.display = "block";
 }
