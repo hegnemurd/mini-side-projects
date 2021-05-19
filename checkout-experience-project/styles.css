@@ -1,4 +1,5 @@
 .parent {
+  display: flex;
   border: 0.5px solid #dde1e6;
   border-radius: 15px;
   padding: 1.5rem;
@@ -19,13 +20,14 @@
 
 #loader {
   display: none;
-  top: 0;
+  /* top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 0; */
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 2;
   position: absolute;
+  align-items: center;
   border-radius: inherit;
 }
 
