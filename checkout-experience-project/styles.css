@@ -11,7 +11,8 @@
 }
 
 .container,
-#loader {
+#loader,
+#done {
   width: 100%;
   height: 100%;
 }
@@ -28,25 +29,17 @@
   border-radius: inherit;
 }
 
-.loader-2 {
-  border: 6px solid #f3f3f3; /* Light grey */
-  border-top: 6px solid #3498db; /* Blue */
-  border-radius: 50%;
+.spinner-border {
   width: 60px;
   height: 60px;
-  animation: spin 2s linear infinite;
   position: absolute;
   left: 41%;
   top: 42%;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+#done {
+  display: none;
+  margin-top: 50%;
 }
 
 .saved-button {
@@ -55,10 +48,9 @@
   margin: 1rem;
   padding: 0.5rem 1.01rem;
   background-color: #f7f5f5;
-  /* background: rgb(85, 86, 88); */
 }
 
-.pay-button {
+#pay-button {
   border: 0.5px solid #dde1e6;
   border-radius: 10px;
   margin-bottom: 1rem;
@@ -76,6 +68,7 @@
   margin: 1em 0 2em 0;
   text-align: center;
 }
+
 .divider span {
   background: white none repeat scroll 0 0;
   padding: 0.1em 1.5em;
