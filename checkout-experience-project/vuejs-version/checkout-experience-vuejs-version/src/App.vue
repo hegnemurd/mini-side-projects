@@ -2,25 +2,7 @@
   <div id="app">
     <!-- <CheckoutExperience></CheckoutExperience> -->
     <div class="parent">
-      <div class="container">
-        <h4>£129.99</h4>
-        <quick-pay></quick-pay>
-        <div class="divider">
-          <span> OR</span>
-        </div>
-        <div class="integrations">
-          <div class="paypal">
-            <button class="paypal-button">PayPal</button>
-          </div>
-          <div class="google">
-            <button class="google-button">
-              <span class="blue">G</span><span class="red">o</span
-              ><span class="yellow">o</span><span class="blue">g</span
-              ><span class="green">l</span><span class="red">e</span> Pay
-            </button>
-          </div>
-        </div>
-      </div>
+      <container></container>
 
       <div id="loader">
         <span class="spinner-border text-light" role="status"></span>
@@ -32,14 +14,139 @@
 </template>
 
 <script>
-import QuickPay from "./components/QuickPay.vue";
+import Container from "./components/Container.vue";
 
 export default {
   name: "App",
   components: {
-    QuickPay,
+    Container,
   },
 };
 </script>
 
-<style></style>
+<style>
+.parent {
+  display: flex;
+  flex-direction: column;
+  border: 0.5px solid #dde1e6;
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin: 5%;
+  width: 280px;
+  height: 300px;
+  text-align: center;
+  box-shadow: -10px 20px 30px 10px #909296;
+  position: relative;
+}
+
+.container,
+#loader,
+#done {
+  width: 100%;
+  height: 100%;
+}
+
+#loader {
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  position: absolute;
+  border-radius: inherit;
+}
+
+.spinner-border {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 41%;
+  top: 42%;
+}
+
+#done {
+  display: none;
+  margin-top: 50%;
+}
+
+h4 {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  margin: 0.5rem;
+  font-weight: 500;
+}
+
+.saved-button {
+  border: 0.5px solid #f7f5f5;
+  border-radius: 10px;
+  margin: 1rem;
+  padding: 0.5rem 1.01rem;
+  background-color: #f7f5f5;
+  font-size: 15px;
+}
+
+#pay-button {
+  border: 0.5px solid #dde1e6;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  padding: 0.3rem 2rem;
+  background-color: #252525fd;
+  color: #ffff;
+}
+
+.divider {
+  border-top: 1px solid #dde1e6;
+  display: flex;
+  height: 1px;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 0 2em 0;
+  text-align: center;
+}
+
+.divider span {
+  background: white none repeat scroll 0 0;
+  padding: 0.1em 1.5em;
+  font-family: sans-serif;
+}
+
+.paypal {
+  padding: 5px;
+}
+
+.paypal-button {
+  border: 0.5px solid #dde1e6;
+  border-radius: 10px;
+  margin-bottom: 0.25rem;
+  padding: 0.2rem 6.1rem;
+  background-color: #a9d0ff;
+  color: #0055bd;
+}
+
+.google-button {
+  border: 0.5px solid #dde1e6;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  padding: 0.2rem 4.95rem;
+  background-color: #000000;
+  color: #ffff;
+}
+
+.blue {
+  color: #006bee;
+}
+
+.red {
+  color: #e71212;
+}
+
+.yellow {
+  color: #f1ee1c;
+}
+
+.green {
+  color: #0cb607;
+}
+</style>
