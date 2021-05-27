@@ -2,7 +2,8 @@
   <div class="quick-pay-container">
     <div class="saved-card">
       <b-button class="saved-button">
-        <b-icon icon="credit-card" aria-hidden="true"></b-icon> Saved Card **** 4321
+        <b-icon icon="credit-card" aria-hidden="true"></b-icon> Saved Card ****
+        4321
         <input
           class="form-check-input"
           type="radio"
@@ -19,7 +20,13 @@
 </template>
 
 <script>
-export default {};
+import { BIcon } from 'bootstrap-vue'
+
+export default {
+  components: {
+    BIcon
+  }
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
