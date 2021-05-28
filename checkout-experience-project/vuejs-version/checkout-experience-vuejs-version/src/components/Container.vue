@@ -14,7 +14,7 @@ import QuickPay from "./QuickPay";
 import Integrations from "./Integrations";
 
 export default {
-  name: "Parent",
+  name: "Container",
   components: {
     QuickPay,
     Integrations,
@@ -22,9 +22,22 @@ export default {
 };
 </script>
 
-<style>
-/* .container {
-  width: 100%;
-  height: 100%;
-} */
+<style scoped>
+.divider {
+  border-top: 1px solid #dde1e6;
+  display: flex;
+  height: 1px;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 0 2em 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+font-weight: 100;
+}
+
+.divider span {
+  background: white none repeat scroll 0 0;
+  padding: 0.1em 1.5em;
+  font-family: sans-serif;
+}
 </style>
