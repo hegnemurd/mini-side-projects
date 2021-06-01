@@ -32,7 +32,7 @@ export default {
   margin: 1em 0 2em 0;
   text-align: center;
   font-family: Arial, sans-serif;
-font-weight: 100;
+  font-weight: 100;
 }
 
 .divider span {

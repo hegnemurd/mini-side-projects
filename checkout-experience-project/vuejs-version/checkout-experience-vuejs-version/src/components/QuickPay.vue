@@ -16,7 +16,7 @@
       </b-button>
     </div>
     <div class="one-click-pay">
-      <b-button id="pay-button"
+      <b-button id="pay-button" @click="loader"
         >One-Click Pay<b-icon icon="lock"></b-icon
       ></b-button>
     </div>
@@ -29,6 +29,12 @@ import { BIcon } from "bootstrap-vue";
 export default {
   components: {
     BIcon,
+  },
+  methods: {
+    loader: function() {
+      document.getElementById("loader").style.display = "block";
+      document.getElementsByClass("spinner-border")[0].style.display = "block";
+    },
   },
 };
 </script>
@@ -58,5 +64,12 @@ export default {
   background-color: #252525fd;
   color: #ffff;
   font-family: Arial, sans-serif;
+}
+
+#pay-button:hover {
+  cursor: pointer;
+  background-color: #f7f5f5;
+  color: rgb(0, 0, 0);
+  box-shadow: -1px 1px 4px 1px #aeafb1;
 }
 </style>
