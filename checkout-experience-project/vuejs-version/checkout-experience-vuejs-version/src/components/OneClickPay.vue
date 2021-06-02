@@ -1,5 +1,5 @@
 <template>
-  <div class="one-click-pay">
+  <div class="one-click-pay" id="one-click-pay">
     <b-button id="pay-button" @click="loader"
       >One-Click Pay<b-icon icon="lock"></b-icon
     ></b-button>

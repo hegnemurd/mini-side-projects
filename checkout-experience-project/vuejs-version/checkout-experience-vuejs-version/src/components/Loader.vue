@@ -5,7 +5,17 @@
 </template>
 
 <script>
-export default {};
+export default {
+  el: "#one-click-pay",
+  data: {
+    id: "loader"
+  },
+  methods: {
+    loader: function(event) {
+      
+    }
+  }
+};
 </script>
 
 <style scoped>
