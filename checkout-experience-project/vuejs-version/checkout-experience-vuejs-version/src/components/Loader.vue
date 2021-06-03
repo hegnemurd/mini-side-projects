@@ -8,13 +8,20 @@
 export default {
   el: "#one-click-pay",
   data: {
-    id: "loader"
+    class: "spinnder-boarder text-light",
+    id: "loader",
   },
   methods: {
-    loader: function(event) {
+    loader: function() {
+      var changedContainer = document.getElementById("loader");
+      // if (!changedContainer) {
+      //   changedContainer.style.display = "block";
+      // } else {
+      //   changedContainer.style.display = "none";
+      // }
       
-    }
-  }
+    },
+  },
 };
 </script>
 
