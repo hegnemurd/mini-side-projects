@@ -15,7 +15,7 @@
         />
       </b-button>
     </div>
-    <one-click-pay></one-click-pay>
+    <one-click-pay @click-button="$emit('click-one-click-pay', $event)"></one-click-pay>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="one-click-pay" id="one-click-pay">
-    <b-button id="pay-button" @click="loading(load)"
+    <b-button id="pay-button" @click="$emit('click-button', $event)"
       >One-Click Pay<b-icon icon="lock"></b-icon
     ></b-button>
   </div>

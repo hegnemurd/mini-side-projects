@@ -1,7 +1,9 @@
 <template>
   <div class="container">
     <h4>£129.99</h4>
-    <quick-pay></quick-pay>
+    <quick-pay
+      @click-one-click-pay="$emit('clicked-quick-pay', $event)"
+    ></quick-pay>
     <div class="divider">
       <span> OR</span>
     </div>

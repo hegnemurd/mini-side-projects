@@ -2,8 +2,8 @@
   <div id="app">
     <!-- <CheckoutExperience></CheckoutExperience> -->
     <div class="parent">
-      <container></container>
-      <loader></loader>
+      <container @clicked-quick-pay="change"></container>
+      <loader v-if="clicked === true"></loader>
       <div id="done">Payment Successful!</div>
     </div>
   </div>
@@ -19,6 +19,39 @@ export default {
     Container,
     Loader,
   },
+  data: function() {
+    return {
+      clicked: false,
+    };
+  },
+  methods: {
+    change: function() {
+      if (this.clicked === false) {
+        this.clicked = true;
+        setTimeout(() => {
+        
+      }, 3000);
+      } else {
+        this.clicked = false;
+      }
+    },
+  },
+    // methods: {
+  //  loading(load) {
+      //var changedContainer = document.getElementById("loader");
+      // if (!changedContainer) {
+      //   changedContainer.style.display = "block";
+      // } else {
+      //   changedContainer.style.display = "none";
+      // }
+      // this.$emit(load);
+      
+    // },
+    // done: function() {
+      // data
+    // },
+  // },
+// };
 };
 </script>
 
@@ -55,4 +88,5 @@ h4 {
   margin: 0.5rem;
   font-weight: 500;
 }
+
 </style>

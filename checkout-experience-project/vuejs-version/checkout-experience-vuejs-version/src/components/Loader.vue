@@ -5,32 +5,11 @@
 </template>
 
 <script>
-export default {
-  el: "#one-click-pay",
-  
-  methods: {
-   loading(load) {
-      //var changedContainer = document.getElementById("loader");
-      // if (!changedContainer) {
-      //   changedContainer.style.display = "block";
-      // } else {
-      //   changedContainer.style.display = "none";
-      // }
-      this.$emit(load);
-      setTimeout(() => {
-        this.done();
-      }, 3000);
-    },
-    done: function() {
-      // data
-    },
-  },
-};
+export default {}
 </script>
 
-<style scoped>
+<style>
 #loader {
-  display: none;
   top: 0;
   left: 0;
   right: 0;
@@ -39,6 +18,8 @@ export default {
   z-index: 2;
   position: absolute;
   border-radius: inherit;
+   width: 100%;
+  height: 100%;
 }
 
 .spinner-border {
@@ -47,5 +28,6 @@ export default {
   position: absolute;
   left: 41%;
   top: 42%;
+  /* border-color: white transparent transparent transparent; */
 }
 </style>
