@@ -27,22 +27,18 @@ export default {};
   border: 0.5px solid #dde1e6;
   border-radius: 10px;
   margin-bottom: 0.25rem;
-  padding: 0.4rem 6.5rem;
+  padding: 0.2rem 6.1rem;
   background-color: #a9d0ff;
   color: #0055bd;
-  font-family: Arial, sans-serif;
-  font-size: inherit;
 }
 
 .google-button {
   border: 0.5px solid #dde1e6;
   border-radius: 10px;
-  margin-bottom: 1.5rem;
-  padding: 0.4rem 5.5rem;
+  margin-bottom: 1rem;
+  padding: 0.2rem 4.95rem;
   background-color: #000000;
   color: #ffff;
-  font-family: Arial, sans-serif;
-  font-size: inherit;
 }
 
 .blue {

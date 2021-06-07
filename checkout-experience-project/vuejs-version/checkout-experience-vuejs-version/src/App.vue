@@ -28,30 +28,28 @@ export default {
     change: function() {
       if (this.clicked === false) {
         this.clicked = true;
-        setTimeout(() => {
-        
-      }, 3000);
+        setTimeout(() => {}, 3000);
       } else {
         this.clicked = false;
       }
     },
   },
-    // methods: {
+  // methods: {
   //  loading(load) {
-      //var changedContainer = document.getElementById("loader");
-      // if (!changedContainer) {
-      //   changedContainer.style.display = "block";
-      // } else {
-      //   changedContainer.style.display = "none";
-      // }
-      // this.$emit(load);
-      
-    // },
-    // done: function() {
-      // data
-    // },
+  //var changedContainer = document.getElementById("loader");
+  // if (!changedContainer) {
+  //   changedContainer.style.display = "block";
+  // } else {
+  //   changedContainer.style.display = "none";
+  // }
+  // this.$emit(load);
+
   // },
-// };
+  // done: function() {
+  // data
+  // },
+  // },
+  // };
 };
 </script>
 
@@ -63,8 +61,8 @@ export default {
   border-radius: 15px;
   padding: 1.5rem;
   margin: 5%;
-  width: 280px;
-  height: 300px;
+  width: 330px;
+  height: 350px;
   text-align: center;
   box-shadow: -10px 20px 30px 10px #909296;
   position: relative;
@@ -80,13 +78,6 @@ export default {
 #done {
   display: none;
   margin-top: 50%;
-}
-
-h4 {
-  font-family: Arial, sans-serif;
-  font-size: 20px;
-  margin: 0.5rem;
-  font-weight: 500;
 }
 
 </style>

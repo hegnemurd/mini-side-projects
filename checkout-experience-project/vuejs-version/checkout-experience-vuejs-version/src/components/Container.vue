@@ -33,13 +33,9 @@ export default {
   align-items: center;
   margin: 1em 0 2em 0;
   text-align: center;
-  font-family: Arial, sans-serif;
-  font-weight: 100;
 }
-
 .divider span {
   background: white none repeat scroll 0 0;
   padding: 0.1em 1.5em;
-  font-family: sans-serif;
 }
 </style>

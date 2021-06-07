@@ -11,7 +11,6 @@
           type="radio"
           name="flexRadioDefault"
           id="flexRadioDefault1"
-          style="width: 15pxpx; height: 15px' align-items: center; padding: 2px;"
         />
       </b-button>
     </div>
@@ -36,15 +35,23 @@ export default {
 .card {
   display: inline;
   vertical-align: text-top;
+  background: #f7f5f5;
+  border: none;
 }
 
 .saved-button {
   border: 0.5px solid #f7f5f5;
   border-radius: 10px;
   margin: 1rem;
-  padding: 0.6rem 1.01rem;
+  padding: 0.5rem 1.01rem;
   background-color: #f7f5f5;
-  font-size: 15px;
-  font-family: Arial, sans-serif;
+  color: black;
+}
+
+.flexRadioDefault{
+  width: 15px; 
+  height: 15px; 
+  align-items: center; 
+  margin: 10px 2px;
 }
 </style>
