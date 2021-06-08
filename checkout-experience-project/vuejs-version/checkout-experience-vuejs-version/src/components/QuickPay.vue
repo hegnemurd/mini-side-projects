@@ -3,18 +3,23 @@
     <div class="saved-card">
       <b-button class="saved-button">
         <span class="card"
-          ><b-icon icon="credit-card" aria-hidden="true"></b-icon
-        ></span>
-        Saved Card **** 4321
-        <input
-          class="form-check-input"
-          type="radio"
-          name="flexRadioDefault"
-          id="flexRadioDefault1"
-        />
+          ><b-icon
+            icon="credit-card"
+            style="width: 17px;"
+            aria-hidden="true"
+          ></b-icon>
+          Saved Card **** 4321
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault1"
+        /></span>
       </b-button>
     </div>
-    <one-click-pay @click-button="$emit('click-one-click-pay', $event)"></one-click-pay>
+    <one-click-pay
+      @click-button="$emit('click-one-click-pay', $event)"
+    ></one-click-pay>
   </div>
 </template>
 
@@ -46,12 +51,50 @@ export default {
   padding: 0.5rem 1.01rem;
   background-color: #f7f5f5;
   color: black;
+  padding: 5px 9px 8px;
+  text-align: center;
 }
 
-.flexRadioDefault{
-  width: 15px; 
-  height: 15px; 
-  align-items: center; 
-  margin: 10px 2px;
+.saved-button:hover {
+  text-decoration: none;
+  color: black;
+  background-color: #f7f5f5;
+  border: 0.5px solid #f7f5f5;
+}
+
+#flexRadioDefault1 {
+  margin: 5px 4px 0px 3px;
+  border: 0.5px solid #d1cfcf;
+}
+
+.form-check-input {
+  width: 1em;
+  height: 1em;
+  border: 1px solid #ececec;
+  position: inherit;
+}
+
+
+.btn-secondary:focus, .btn-secondary.focus {
+    color: black;
+    background-color: #f7f5f5;
+    border-color: #f7f5f5;
+    box-shadow: 0 0 0 0.2rem #f7f5f5;
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active,
+.btn-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-secondary.dropdown-toggle {
+  color: black;
+  background-color: #f7f5f5;
+  border-color: #f7f5f5;
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active,
+.btn-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-secondary.dropdown-toggle {
+  color: black;
+  background-color: #f7f5f5;
+  border-color: #f7f5f5;
 }
 </style>

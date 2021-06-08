@@ -8,7 +8,7 @@
 
 <script>
 export default {};
-</script> 
+</script>
 
 <style scoped>
 #pay-button {
@@ -20,4 +20,11 @@ export default {};
   color: #ffff;
 }
 
+.btn-secondary:focus,
+.btn-secondary.focus {
+  color: black;
+  background-color: #f7f5f5;
+  border-color: #f7f5f5;
+  box-shadow: 0 0 0 0.2rem #f7f5f5;
+}
 </style>

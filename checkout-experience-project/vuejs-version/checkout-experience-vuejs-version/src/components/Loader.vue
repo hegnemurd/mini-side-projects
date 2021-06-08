@@ -8,9 +8,8 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 #loader {
-  display: none;
   top: 0;
   left: 0;
   right: 0;
@@ -19,5 +18,21 @@ export default {};
   z-index: 2;
   position: absolute;
   border-radius: inherit;
+}
+
+.spinner-border {
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  vertical-align: text-bottom;
+  border: 0.25em solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  -webkit-animation: 1s linear infinite spinner-border;
+  animation: 1s linear infinite spinner-border;
+  color: white;
+  position: absolute;
+  left: 41%;
+  top: 44%;
 }
 </style>

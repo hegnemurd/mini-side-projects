@@ -4,7 +4,7 @@
     <div class="parent">
       <container @clicked-quick-pay="change"></container>
       <loader v-if="clicked === true"></loader>
-      <div id="done">Payment Successful!</div>
+      <div v-if="done" id="done">Payment Successful!</div>
     </div>
   </div>
 </template>
@@ -22,13 +22,17 @@ export default {
   data: function() {
     return {
       clicked: false,
+      done: false,
     };
   },
   methods: {
     change: function() {
       if (this.clicked === false) {
         this.clicked = true;
-        setTimeout(() => {}, 3000);
+        setTimeout(() => {
+          this.clicked = false;
+          this.done = true;
+        }, 3000);
       } else {
         this.clicked = false;
       }
