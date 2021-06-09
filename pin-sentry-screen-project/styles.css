@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #bdbdbd;
+    background: #fff;
+    border-radius: 15px;
+    width: 310.5px;
+    height: 552px; 
+    box-shadow: -5px 10px 10px 5px #909296;
+    margin: 10%;
+    padding: 0px;
+}
+
+.app-bar {
+    padding: 7%;
+    text-align: center;
+    background: #b6d3db;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.enter-pin {
+    padding: 7%;
+    text-align: center;
+    background: #ffdeed;
+}
+
+.pin-numbers {
+    padding: 53% 0%;
+    text-align: center;
+    background: #fdd5e0;
+}
+
+.three-buttons {
+    padding: 7%;
+    text-align: center;
+    background: #adb3d8;
+    border-radius: 0px 0px 15px 15px;
+}
