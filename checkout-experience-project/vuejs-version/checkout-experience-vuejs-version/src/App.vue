@@ -2,8 +2,8 @@
   <div id="app">
     <!-- <CheckoutExperience></CheckoutExperience> -->
     <div class="parent">
-      <container @clicked-quick-pay="change"></container>
-      <loader v-if="clicked === true"></loader>
+      <container v-if="!done" @clicked-quick-pay="change"></container>
+      <loader v-if="clicked"></loader>
       <div v-if="done" id="done">Payment Successful!</div>
     </div>
   </div>
@@ -72,15 +72,12 @@ export default {
   position: relative;
 }
 
-.container,
-#loader,
 #done {
   width: 100%;
   height: 100%;
 }
 
 #done {
-  display: none;
   margin-top: 50%;
 }
 

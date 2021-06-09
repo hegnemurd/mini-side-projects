@@ -25,6 +25,11 @@ export default {
 </script>
 
 <style scoped>
+.container {
+  width: 100%;
+  height: 100%;
+}
+
 .divider {
   border-top: 1px solid #dde1e6;
   display: flex;
