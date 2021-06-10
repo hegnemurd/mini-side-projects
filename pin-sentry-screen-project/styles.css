@@ -1,3 +1,6 @@
+body {
+  font-family: "Exo 2", sans-serif;
+}
 .container {
   display: flex;
   flex-direction: column;
@@ -6,7 +9,7 @@
   border-radius: 15px;
   width: 310.5px;
   height: 552px;
-  box-shadow: -5px 10px 10px 5px #909296;
+  box-shadow: -5px 10px 10px 5px #cacbcc;
   margin: 10%;
   padding: 0px;
 }
@@ -16,6 +19,8 @@
   text-align: center;
   background: #ffffff;
   border-radius: 15px 15px 0px 0px;
+  /* border-bottom: 1px solid #e5caf7; */
+  /* box-shadow: -5px 10px 10px 5px #f6f7f8; */
 }
 
 .back-button {
@@ -36,7 +41,8 @@
 .enter-pin {
   padding: 9%;
   text-align: center;
-  background: #ffdeed;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .pin-numbers {
