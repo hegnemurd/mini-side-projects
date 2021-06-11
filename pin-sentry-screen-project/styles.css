@@ -1,5 +1,7 @@
 body {
   font-family: "Exo 2", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
 }
 .container {
   display: flex;
@@ -41,14 +43,64 @@ body {
 .enter-pin {
   padding: 9%;
   text-align: center;
-  font-size: 20px;
-  font-weight: 600;
 }
 
 .pin-numbers {
-  padding: 51% 0%;
-  text-align: center;
+  padding: 22.7% 0%;
   background: #fdd5e0;
+}
+
+/* .flex-grid {
+  display: flex;
+
+}
+
+.flex-col {
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.flex-row {
+  flex: 1;
+} */
+
+form {
+  display: block;
+  margin-top: 0em;
+  margin-block-end: 1em;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-xs-4 {
+  padding: 0;
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid #bdbdbd;
+  width: 80px;
+  padding: 15px !important;
+  outline: none;
+  border-radius: 50% !important;
+  text-transform: none;
+  overflow: visible;
+  margin: 0;
+  align-items: flex-start;
+}
+
+.pin-buttons {
+  border-radius: 100%;
+  font-size: 40px;
+  border: 1px solid #bdbdbd;
 }
 
 .three-buttons {
