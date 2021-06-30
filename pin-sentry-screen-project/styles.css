@@ -1,6 +1,10 @@
-*,
+/* *,
 ::after,
 ::before {
+  box-sizing: border-box;
+} */
+
+* {
   box-sizing: border-box;
 }
 
@@ -8,9 +12,12 @@ body {
   font-family: "Exo 2", sans-serif;
   font-size: 20px;
   font-weight: 600;
-}
-.container {
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container {
   flex-direction: column;
   border: 1px solid #bdbdbd;
   background: #fff;
@@ -56,6 +63,10 @@ body {
   background: #fdd5e0;
 }
 
+.pin {
+  text-align: center;
+}
+
 /* .flex-grid {
   display: flex;
 
@@ -83,9 +94,13 @@ form {
 
 .row {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin-right: -15px;
   margin-left: -15px;
+  width: 90px;
+  height: 80px;
+  padding-left: 25%;
+  justify-content: space-between;
 }
 
 .justify-content-center {
@@ -101,7 +116,7 @@ form {
 }
 
 .btn {
-  /* display: inline-block;
+  display: inline-block;
   text-align: center;
   vertical-align: middle;
   user-select: none;
@@ -113,8 +128,8 @@ form {
   text-transform: none;
   overflow: visible;
   margin: 0;
-  align-items: flex-start; */
-  display: inline-block;
+  align-items: center;
+  /* display: flex;
   font-weight: 400;
   color: #212529;
   text-align: center;
@@ -130,6 +145,12 @@ form {
   font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.25rem;
+  justify-content: center;
+  align-items: center; */
+}
+
+.number-buttons {
+  margin: 5px;
 }
 
 button {
@@ -153,4 +174,5 @@ button {
   text-align: center;
   background: #adb3d8;
   border-radius: 0px 0px 15px 15px;
+  margin-top: 55%;
 }
