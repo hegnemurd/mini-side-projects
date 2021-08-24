@@ -17,7 +17,7 @@ body {
   width: 310px;
   height: 550px;
   box-shadow: -5px 10px 10px 5px #cacbcc;
-  margin: 10%;
+  margin: 5%;
   justify-content: stretch;
   flex-direction: column;
   display: flex;
