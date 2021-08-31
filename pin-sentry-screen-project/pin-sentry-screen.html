@@ -21,8 +21,9 @@
     />
     <link rel="stylesheet" href="./styles.css" />
     <title>PINsentry Screen</title>
+    <script src="./pin-sentry-screen.js"></script>
   </head>
-  <body>
+  <body onload="creatingElements()">
     <div class="flex-container">
       <div class="app-bar">
         <button class="back-button d-flex flex-row">
@@ -38,39 +39,39 @@
         </div>
         <div class="row mt-5">
           <div class="col-md-12 d-flex justify-content-center">
-            <form class="pin-numbers">
+            <form class="pin-numbers" id="pin-number-pad">
               <div class="row">
-                <div class="number-buttons">
-                  <button type="button" class="btn" data-pin-char="1">1</button>
+                <!-- <div class="number-buttons">
+                  <button type="button" class="btn" data-pin-char="1"></button>
                 </div>
                 <div class="number-buttons">
-                  <button type="button" class="btn" data-pin-char="2">2</button>
+                  <button type="button" class="btn" data-pin-char="2"></button>
                 </div>
                 <div class="number-buttons">
-                  <button type="button" class="btn" data-pin-char="3">3</button>
-                </div>
+                  <button type="button" class="btn" data-pin-char="3"></button>
+                </div> -->
               </div>
               <div class="row">
-                <div class="number-buttons">
-                  <button type="button" class="btn" data-pin-char="4">4</button>
+                <!-- <div class="number-buttons">
+                  <button type="button" class="btn" data-pin-char="4"></button>
                 </div>
                 <div class="number-buttons">
-                  <button type="button" class="btn" data-pin-char="5">5</button>
+                  <button type="button" class="btn" data-pin-char="5"></button>
                 </div>
                 <div class="number-buttons">
-                  <button type="button" class="btn" data-pin-char="6">6</button>
-                </div>
+                  <button type="button" class="btn" data-pin-char="6"></button>
+                </div> -->
               </div>
               <div class="row">
-                <div class="number-buttons">
-                  <button type="button" class="btn" data-pin-char="7">7</button>
+                <!-- <div class="number-buttons">
+                  <button type="button" class="btn" data-pin-char="7"></button>
                 </div>
                 <div class="number-buttons">
-                  <button type="button" class="btn" data-pin-char="8">8</button>
+                  <button type="button" class="btn" data-pin-char="8"></button>
                 </div>
                 <div class="number-buttons">
-                  <button type="button" class="btn" data-pin-char="9">9</button>
-                </div>
+                  <button type="button" class="btn" data-pin-char="9"></button>
+                </div> -->
               </div>
             </form>
           </div>
@@ -79,11 +80,10 @@
       <div class="three-buttons">
         <button class="clearButton" onclick="clearInput()">C</button>
         <button class="subButton">Submit</button>
-        <button class="refButton" onclick="rearrangeNumbers()">
+        <button class="refButton" onclick="shuffle()">
           <i class="bi bi-arrow-counterclockwise"></i>
         </button>
       </div>
     </div>
-    <script src="./pin-sentry-screen.js"></script>
   </body>
 </html>
