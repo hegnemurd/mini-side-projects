@@ -15,13 +15,6 @@
 //   input.value = "";
 // }
 
-// Array.prototype.forEach.call(buttons, function(button) {
-//   buttons.addEventListener("click", function() {
-//     for (let i = 0; i < buttons.length; i++) {
-//       button += buttons[i];
-//     }
-//   })
-// })
 
 // function allNumbers() {
 //   let number = 0;
