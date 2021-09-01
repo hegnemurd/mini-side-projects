@@ -20,12 +20,9 @@ function creatingElements() {
       btn.setAttribute("data-pin-char", pinCharacter);
       i.textContent = pinCharacter;
       btn.innerHTML = pinCharacter;
+      btn.addEventListener("click", numClicked, false);
       copyOfNums.splice(i, 1);
       break;
-    }
-    const buttons = document.getElementsByClassName("btn");
-    for (let j = 0; j < buttons.length; j++) {
-      buttons[j].addEventListener("click", numClicked, false);
     }
     divNames[divIndex].appendChild(btn);
   }
@@ -44,3 +41,34 @@ function clearInput() {
   const input = document.getElementById("pinNum");
   input.value = "";
 }
+
+var ranNums = shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+
+function shuffle(ranNums) {
+  const btns = document.getElementsByClassName("number-buttons");
+  const btnAttr = btns[ranNums].getAttribute("data-pin-char");
+  var btnNums = ranNums.length;
+
+}
+//switching DOM elements around 1 with 9 etc 👆
+// observables
+
+
+
+// var ranNums = shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+
+// function shuffle(array) {
+//   var i = array.length,
+//     j = 0,
+//     temp;
+
+//   while (i--) {
+//     j = Math.floor(Math.random() * (i + 1));
+
+//     temp = array[i];
+//     array[i] = array[j];
+//     array[j] = temp;
+//   }
+
+//   return array;
+// }
