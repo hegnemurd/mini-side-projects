@@ -77,4 +77,7 @@ function shuffle() {
   }
 }
 
+function submitPin() {
+  
+}
 
