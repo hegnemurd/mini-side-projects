@@ -1,9 +1,9 @@
 // create 3 div>button elements per 1 row, when there is 3 rows - DONE
 // one row finished = next row, until all 3 rows are finished then break out of loop - DONE
 // assign 'clearbutton' to clear the number input - DONE
+// assign the 'shuffle' function to shuffle the numbers on the number pad - DONE
+// each button needs to have a random non-repetitive number assigned to it from the 'nums' array - DONE
 
-// assign the 'shuffle' function to shuffle the numbers on the number pad
-// each button needs to have a random non-repetitive number assigned to it from the 'nums' array
 // assign the 'submitPin' function to submit the code and continue to a loading page
 
 const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -11,10 +11,12 @@ let copyOfNums = [...nums];
 
 function creatingElements() {
   let divNames = document.getElementsByClassName("number-buttons");
+
   for (let divIndex = 0; divIndex < divNames.length; divIndex++) {
     const btn = document.createElement("button");
     btn.classList.add("btn");
     btn.setAttribute("type", "button");
+
     for (let i = 0; i < copyOfNums.length; i++) {
       let pinCharacter = copyOfNums[i];
       btn.setAttribute("data-pin-char", pinCharacter);
@@ -24,6 +26,7 @@ function creatingElements() {
       copyOfNums.splice(i, 1);
       break;
     }
+
     divNames[divIndex].appendChild(btn);
   }
 }
@@ -42,33 +45,36 @@ function clearInput() {
   input.value = "";
 }
 
-var ranNums = shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+function shuffle() {
+  const btns = document.getElementsByClassName("btn");
+  var ranNums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  shufArray(ranNums);
+  function shufArray(ranNums) {
+    var i = ranNums.length,
+      j = 0,
+      temp;
 
-function shuffle(ranNums) {
-  const btns = document.getElementsByClassName("number-buttons");
-  const btnAttr = btns[ranNums].getAttribute("data-pin-char");
-  var btnNums = ranNums.length;
+    while (i--) {
+      j = Math.floor(Math.random() * (i + 1));
 
+      temp = ranNums[i];
+      ranNums[i] = ranNums[j];
+      ranNums[j] = temp;
+    }
+    return ranNums;
+  }
+  let copyOfRanNums = [...ranNums];
+  for (let btnIndex = 0; btnIndex < btns.length; btnIndex++) {
+    const btn = btns[btnIndex];
+    for (let n = 0; n < copyOfRanNums.length; n++) {
+      let pinChar = copyOfRanNums[n];
+      btn.setAttribute("data-pin-char", pinChar);
+      n.textContent = pinChar;
+      btn.innerHTML = pinChar;
+      copyOfRanNums.splice(n, 1);
+      break;
+    }
+  }
 }
-//switching DOM elements around 1 with 9 etc 👆
-// observables
 
 
-
-// var ranNums = shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9]);
-
-// function shuffle(array) {
-//   var i = array.length,
-//     j = 0,
-//     temp;
-
-//   while (i--) {
-//     j = Math.floor(Math.random() * (i + 1));
-
-//     temp = array[i];
-//     array[i] = array[j];
-//     array[j] = temp;
-//   }
-
-//   return array;
-// }
