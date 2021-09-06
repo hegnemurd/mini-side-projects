@@ -77,7 +77,26 @@ function shuffle() {
   }
 }
 
-function submitPin() {
-  
+// function submitPin() {
+//   document.getElementById("flex-cont").style.display = "none";
+//   document.getElementById("loading").style.display = "block";
+//   setTimeout(() => {
+//     document.getElementById("loading").style.display = "none";
+//     document.getElementById("finished").style.display = "block";
+//   }, 2000);
+// }
+
+document.getElementById("submitBbutton").addEventListener("click", loading);
+document.getElementById("submitBbutton").addEventListener("click", finished);
+
+function loading() {
+  document.getElementById("loading").style.display = "block";
 }
 
+function finished() {
+  setTimeout(function myFunction() {
+    document.getElementById("loading").style.display = "none";
+    document.getElementsByClassName("flex-container")[0].style.display = "none";
+    document.getElementById("finished").style.display = "block";
+  }, 3000);
+}

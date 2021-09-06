@@ -10,7 +10,53 @@ body {
   justify-content: center;
 }
 
-.flex-container {
+.miain-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #bdbdbd;
+  border-radius: 15px;
+  background: #fff;
+  width: 310px;
+  height: 550px;
+  box-shadow: -5px 10px 10px 5px #cacbcc;
+  margin: 5%;
+  justify-content: stretch;
+  position: relative;
+}
+
+.container,
+#loading,
+#finished {
+  width: 100%;
+  height: 100%;
+}
+
+#loading {
+  display: none;
+  border: 1px solid #bdbdbd;
+  background: #fff;
+  border-radius: 15px;
+  width: 310px;
+  height: 550px;
+  box-shadow: -5px 10px 10px 5px #cacbcc;
+  margin: 5%;
+  justify-content: stretch;
+  flex-direction: column;
+  display: flex;
+}
+
+.text-primary {
+  color: #06aadbde !important;
+  width: 50px;
+  height: 50px;
+}
+
+.spinner-border {
+  animation: 1.5s linear infinite spinner-border;
+}
+
+#finished {
+  display: none;
   border: 1px solid #bdbdbd;
   background: #fff;
   border-radius: 15px;
@@ -101,19 +147,12 @@ input::-webkit-inner-spin-button {
 
 .btn {
   border: 1px solid #bdbdbd;
-  background-color: #06aadbde ;
+  background-color: #06aadbde;
 
   width: 70px;
   height: 70px;
   font-size: x-large;
   border-radius: 50% !important;
-}
-
-.btn:hover {
-  -moz-box-shadow: 0 0 3px #bdbdbd;
-  -webkit-box-shadow: 0 0 3px #bdbdbd;
-  box-shadow: 0 0 3px #bdbdbd;
-  background: #196e88de;
 }
 
 .btn:focus {
@@ -123,8 +162,8 @@ input::-webkit-inner-spin-button {
 button {
   text-align: center;
   outline: none;
-  background-color: #06aadbde ;
-  border-color: #06aadbde ;
+  background-color: #06aadbde;
+  border-color: #06aadbde;
   color: #fff !important;
 }
 
@@ -158,10 +197,6 @@ button {
   padding: 0.5rem 1rem;
 }
 
-.subButton:hover {
-  box-shadow: 5px;
-}
-
 .refButton {
   border-radius: 100%;
   border: 1px solid #06aadbde;
@@ -169,6 +204,13 @@ button {
   height: 45px;
 }
 
+.back-button:hover,
+.btn:hover,
+.clearButton:hover,
+.subButton:hover,
 .refButton:hover {
-  box-shadow: 5px 5px #bdbdbd;
+  -moz-box-shadow: 0 0 3px #bdbdbd;
+  -webkit-box-shadow: 0 0 3px #bdbdbd;
+  box-shadow: 0 0 3px #bdbdbd;
+  background: #196e88de;
 }
