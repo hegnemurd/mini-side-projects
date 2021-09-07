@@ -1,6 +1,6 @@
 // create 3 div>button elements per 1 row, when there is 3 rows - DONE
 // one row finished = next row, until all 3 rows are finished then break out of loop - DONE
-// assign 'clearbutton' to clear the number input - DONE
+// assign 'clear-button' to clear the number input - DONE
 // assign the 'shuffle' function to shuffle the numbers on the number pad - DONE
 // each button needs to have a random non-repetitive number assigned to it from the 'nums' array - DONE
 
@@ -20,7 +20,6 @@ function creatingElements() {
     for (let i = 0; i < copyOfNums.length; i++) {
       let pinCharacter = copyOfNums[i];
       btn.setAttribute("data-pin-char", pinCharacter);
-      i.textContent = pinCharacter;
       btn.innerHTML = pinCharacter;
       btn.addEventListener("click", numClicked, false);
       copyOfNums.splice(i, 1);
@@ -32,7 +31,7 @@ function creatingElements() {
 }
 
 function numClicked() {
-  const input = document.getElementById("pinNum");
+  const input = document.getElementById("pin-num");
   if (input.value.length < 4) {
     input.value += this.getAttribute("data-pin-char");
   } else {
@@ -41,7 +40,7 @@ function numClicked() {
 }
 
 function clearInput() {
-  const input = document.getElementById("pinNum");
+  const input = document.getElementById("pin-num");
   input.value = "";
 }
 
@@ -69,7 +68,6 @@ function shuffle() {
     for (let n = 0; n < copyOfRanNums.length; n++) {
       let pinChar = copyOfRanNums[n];
       btn.setAttribute("data-pin-char", pinChar);
-      n.textContent = pinChar;
       btn.innerHTML = pinChar;
       copyOfRanNums.splice(n, 1);
       break;
@@ -77,26 +75,20 @@ function shuffle() {
   }
 }
 
-// function submitPin() {
-//   document.getElementById("flex-cont").style.display = "none";
-//   document.getElementById("loading").style.display = "block";
-//   setTimeout(() => {
-//     document.getElementById("loading").style.display = "none";
-//     document.getElementById("finished").style.display = "block";
-//   }, 2000);
-// }
-
-document.getElementById("submitBbutton").addEventListener("click", loading);
-document.getElementById("submitBbutton").addEventListener("click", finished);
-
 function loading() {
-  document.getElementById("loading").style.display = "block";
+  const input = document.getElementById("pin-num");
+  if (input.value.length === 4) {
+    document.getElementById("loading").style.display = "flex";
+    finished();
+  } else {
+    alert("Pin needs to be 4 numbers long.");
+  }
 }
 
 function finished() {
   setTimeout(function myFunction() {
+    document.getElementsByClassName("cont")[0].style.display = "none";
     document.getElementById("loading").style.display = "none";
-    document.getElementsByClassName("flex-container")[0].style.display = "none";
-    document.getElementById("finished").style.display = "block";
+    document.getElementById("finished").style.display = "flex";
   }, 3000);
 }
