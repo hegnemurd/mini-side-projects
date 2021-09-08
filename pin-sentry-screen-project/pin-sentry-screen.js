@@ -1,10 +1,13 @@
 // create 3 div>button elements per 1 row, when there is 3 rows - DONE
 // one row finished = next row, until all 3 rows are finished then break out of loop - DONE
-// assign 'clear-button' to clear the number input - DONE
-// assign the 'shuffle' function to shuffle the numbers on the number pad - DONE
-// each button needs to have a random non-repetitive number assigned to it from the 'nums' array - DONE
-
-// assign the 'submitPin' function to submit the code and continue to a loading page
+// If BackButton clicked, clear the pin entered on screen. - DONE
+// Show asterisk, in place of "Enter Pin" text, every time a PinNumber (PinNumberButton) is clicked. - DONE
+// Maximum pin length is 4. Minimum pin length is 4, before being able to submit. - DONE
+// If ClearButton is clicked, remove the last digit entered one by one.  - DONE
+// Show "Enter Pin" if no pin entered. - DONE
+// If SubmitButton clicked, go to next screen (SuccessScreen). SubmitButton to be disabled until 4 digits entered. - DONE
+// If PinRotateButton clicked, rotate numbers randomly in PinNumberButtons. (Challenge). - DONE
+// Submit button is disable till input has 4 numbers
 
 const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 let copyOfNums = [...nums];
@@ -22,6 +25,7 @@ function creatingElements() {
       btn.setAttribute("data-pin-char", pinCharacter);
       btn.innerHTML = pinCharacter;
       btn.addEventListener("click", numClicked, false);
+      btn.addEventListener("click", subButtonActive, false);
       copyOfNums.splice(i, 1);
       break;
     }
@@ -42,6 +46,43 @@ function numClicked() {
 function clearInput() {
   const input = document.getElementById("pin-num");
   input.value = "";
+  const subBtn = document.getElementById("submit-button");
+  subBtn.className = "sub-btn-disabled";
+}
+
+function removeChar() {
+  const input = document.getElementById("pin-num");
+  var val = input.value;
+  var lastNum = val.substr(0, val.length - 1);
+  input.value = lastNum;
+  const subBtn = document.getElementById("submit-button");
+  subBtn.className = "sub-btn-disabled";
+}
+
+function subButtonActive() {
+  const input = document.getElementById("pin-num");
+  const subBtn = document.getElementById("submit-button");
+  if (input.value.length === 4) {
+    subBtn.className = "sub-button";
+  } else {
+    subBtn.className = "sub-btn-disabled";
+  }
+}
+
+function loading() {
+  const input = document.getElementById("pin-num");
+  if (input.value.length === 4) {
+    document.getElementById("loading").style.display = "flex";
+    finished();
+  }
+}
+
+function finished() {
+  setTimeout(function myFunction() {
+    document.getElementsByClassName("cont")[0].style.display = "none";
+    document.getElementById("loading").style.display = "none";
+    document.getElementById("finished").style.display = "flex";
+  }, 3000);
 }
 
 function shuffle() {
@@ -73,22 +114,4 @@ function shuffle() {
       break;
     }
   }
-}
-
-function loading() {
-  const input = document.getElementById("pin-num");
-  if (input.value.length === 4) {
-    document.getElementById("loading").style.display = "flex";
-    finished();
-  } else {
-    alert("Pin needs to be 4 numbers long.");
-  }
-}
-
-function finished() {
-  setTimeout(function myFunction() {
-    document.getElementsByClassName("cont")[0].style.display = "none";
-    document.getElementById("loading").style.display = "none";
-    document.getElementById("finished").style.display = "flex";
-  }, 3000);
 }

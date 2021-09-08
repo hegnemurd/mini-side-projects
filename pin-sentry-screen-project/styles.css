@@ -187,6 +187,17 @@ button {
   padding: 0.5rem 1rem;
 }
 
+.sub-btn-disabled {
+  border-radius: 16px;
+  border: 1px solid #06aadbde;
+  background-color: #196e88de;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  cursor: context-menu !important;
+  color: rgba(189, 167, 167, 0.781) !important;
+}
+
 .ref-button {
   border-radius: 100%;
   border: 1px solid #06aadbde;
