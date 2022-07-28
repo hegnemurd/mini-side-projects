@@ -8,7 +8,9 @@ function numberEventList() {
 
 document.getElementById("add").addEventListener("click", addNum);
 function addNum(numbersClicked) {
-  numbersClicked[0] + numbersClicked[1];
+  let number = document.getElementById(numbersClicked);
+  let addedNum = number + number;
+  console.log(addedNum);
 }
 
 document.getElementById("subtract").addEventListener("click", subtractNum);
@@ -18,10 +20,10 @@ document.getElementById("divide").addEventListener("click", divideNum);
 function divideNum(numbersClicked) {}
 
 document.getElementById("multiply").addEventListener("click", multiNum);
-function multiplyNum(numbersClicked) {}
+function multiNum(numbersClicked) {}
 
 document.getElementById("clearInput").addEventListener("click", clearNum);
-function clear() {}
+function clearNum() {}
 
 document.getElementById("delete").addEventListener("click", deleteNum);
 
