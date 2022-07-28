@@ -1,9 +1,16 @@
+numberEventList();
+
 function numberEventList() {
-  let numberButtons = document.getElementsByClassName("num-btn");
+  const numberButtons = document.getElementsByClassName("num-btn");
   for (let index = 0; index < numberButtons.length; index++) {
-    let buttonChar = numberButtons[i];
+    const buttonChar = numberButtons[index];
     buttonChar.addEventListener("click", charClicked);
   }
+}
+
+function charClicked(event) {
+  console.log(event);
+  // get the value of the data-number attribute
 }
 
 document.getElementById("add").addEventListener("click", addNum);
