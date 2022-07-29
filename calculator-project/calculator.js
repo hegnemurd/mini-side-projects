@@ -9,13 +9,14 @@ function numberEventList() {
 }
 
 function charClicked(event) {
-  console.log(event);
+  let value = event.target.getAttribute("data-number");
+  console.log(value);
   // get the value of the data-number attribute
 }
 
 document.getElementById("add").addEventListener("click", addNum);
 function addNum(numbersClicked) {
-  let number = document.getElementById(numbersClicked);
+  let number = numbersClicked
   let addedNum = number + number;
   console.log(addedNum);
 }
