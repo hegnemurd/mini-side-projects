@@ -9,14 +9,16 @@ function numberEventList() {
 }
 
 function charClicked(event) {
-  let value = event.target.getAttribute("data-number");
-  console.log(value);
+  let numValue = event.target.getAttribute("data-number");
+  document.getElementById("calculation").value += numValue;
+  console.log(numValue);
+  return numValue
   // get the value of the data-number attribute
 }
 
 document.getElementById("add").addEventListener("click", addNum);
-function addNum(numbersClicked) {
-  let number = numbersClicked
+function addNum(numValue) {
+  let number = numValue;
   let addedNum = number + number;
   console.log(addedNum);
 }
