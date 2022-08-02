@@ -1,4 +1,5 @@
 numberEventList();
+charactersEventList();
 
 function numberEventList() {
   const numberButtons = document.getElementsByClassName("num-btn");
@@ -8,20 +9,28 @@ function numberEventList() {
   }
 }
 
+function charactersEventList() {
+  const equationButtons = document.getElementsByClassName("equation-btn");
+  for (let index = 0; index < equationButtons.length; index++) {
+    const buttonChar = equationButtons[index];
+    buttonChar.addEventListener("click", charClicked);
+  }
+}
+
 function charClicked(event) {
   let numValue = event.target.getAttribute("data-number");
   document.getElementById("calculation").value += numValue;
   console.log(numValue);
-  return numValue
+  return numValue;
   // get the value of the data-number attribute
 }
 
-document.getElementById("add").addEventListener("click", addNum);
-function addNum(numValue) {
-  let number = numValue;
-  let addedNum = number + number;
-  console.log(addedNum);
-}
+// document.getElementById("add").addEventListener("click", addNum);
+// function addNum(numValue) {
+//   let number = numValue;
+//   let addedNum = number + number;
+//   console.log(addedNum);
+// }
 
 document.getElementById("subtract").addEventListener("click", subtractNum);
 function subtractNum(numbersClicked) {}
