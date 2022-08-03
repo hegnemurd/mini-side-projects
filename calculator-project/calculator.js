@@ -18,7 +18,7 @@ function charactersEventList() {
 }
 
 function charClicked(event) {
-  let numValue = event.target.getAttribute("data-number");
+  let numValue = event.target.getAttribute("data-character");
   document.getElementById("calculation").value += numValue;
   console.log(numValue);
   return numValue;
@@ -42,7 +42,10 @@ document.getElementById("multiply").addEventListener("click", multiNum);
 function multiNum(numbersClicked) {}
 
 document.getElementById("clearInput").addEventListener("click", clearNum);
-function clearNum() {}
+function clearNum() {
+  const input = document.getElementById("calculation");
+  input.value = "";
+}
 
 document.getElementById("delete").addEventListener("click", deleteNum);
 
