@@ -25,28 +25,31 @@ function charClicked(event) {
   // get the value of the data-number attribute
 }
 
-// document.getElementById("add").addEventListener("click", addNum);
+document.getElementById("add").addEventListener("click", addNum);
+document.getElementById("subtract").addEventListener("click", subtractNum);
+document.getElementById("divide").addEventListener("click", divideNum);
+document.getElementById("multiply").addEventListener("click", multiNum);
+document.getElementById("clearInput").addEventListener("click", clearNum);
+document.getElementById("delete").addEventListener("click", deleteNum);
+
+document.getElementById("equal-btn").addEventListener("click", equationValue)
+function equationValue(inputValue) {
+  // for(i = 0; i <= inputValue; i++) {
+  //   switch ()
+  // }
+}
+
 // function addNum(numValue) {
 //   let number = numValue;
 //   let addedNum = number + number;
 //   console.log(addedNum);
 // }
 
-document.getElementById("subtract").addEventListener("click", subtractNum);
-function subtractNum(numbersClicked) {}
 
-document.getElementById("divide").addEventListener("click", divideNum);
-function divideNum(numbersClicked) {}
-
-document.getElementById("multiply").addEventListener("click", multiNum);
-function multiNum(numbersClicked) {}
-
-document.getElementById("clearInput").addEventListener("click", clearNum);
 function clearNum() {
   const input = document.getElementById("calculation");
   input.value = "";
 }
 
-document.getElementById("delete").addEventListener("click", deleteNum);
 
 function deleteNum(inputValue) {}
