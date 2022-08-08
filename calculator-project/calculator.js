@@ -37,6 +37,17 @@ function equationValue(inputValue) {
   // for(i = 0; i <= inputValue; i++) {
   //   switch ()
   // }
+// find the charater in inputVlaue
+
+  switch(inpuValue) {
+    case "+":
+
+    case "-":
+      
+    case "/":
+
+    case "*":
+  }
 }
 
 // function addNum(numValue) {
