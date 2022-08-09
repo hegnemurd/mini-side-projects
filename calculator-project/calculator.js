@@ -25,28 +25,37 @@ function charClicked(event) {
   // get the value of the data-number attribute
 }
 
-document.getElementById("add").addEventListener("click", addNum);
-document.getElementById("subtract").addEventListener("click", subtractNum);
-document.getElementById("divide").addEventListener("click", divideNum);
-document.getElementById("multiply").addEventListener("click", multiNum);
+// document.getElementById("add").addEventListener("click", addNum);
+// document.getElementById("subtract").addEventListener("click", subtractNum);
+// document.getElementById("divide").addEventListener("click", divideNum);
+// document.getElementById("multiply").addEventListener("click", multiNum);
 document.getElementById("clearInput").addEventListener("click", clearNum);
 document.getElementById("delete").addEventListener("click", deleteNum);
 
-document.getElementById("equal-btn").addEventListener("click", equationValue)
+function checkInput(inputValue) {
+  for (let i = 0; i <= inputValue.length; i++) {
+    if(inputValue){
+    
+    }
+  }
+}
+
+document.getElementById("equal-btn").addEventListener("click", equationValue);
 function equationValue(inputValue) {
   // for(i = 0; i <= inputValue; i++) {
   //   switch ()
   // }
-// find the charater in inputVlaue
+  // find the charater in inputVlaue
 
-  switch(inpuValue) {
+  switch (inputValue) {
     case "+":
-
+      result = number1 + number2;
     case "-":
-      
+      result = number1 + number2;
     case "/":
-
+      result = number1 + number2;
     case "*":
+      result = number1 + number2;
   }
 }
 
@@ -56,11 +65,9 @@ function equationValue(inputValue) {
 //   console.log(addedNum);
 // }
 
-
 function clearNum() {
   const input = document.getElementById("calculation");
   input.value = "";
 }
-
 
 function deleteNum(inputValue) {}
