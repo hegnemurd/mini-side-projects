@@ -34,8 +34,14 @@ document.getElementById("delete").addEventListener("click", deleteNum);
 
 function checkInput(inputValue) {
   for (let i = 0; i <= inputValue.length; i++) {
-    if(inputValue){
-    
+    if (
+      inputValue === "+" ||
+      inputValue === "-" ||
+      inputValue === "/" ||
+      inputValue === "*"
+    ) {
+      let button = document.getElementsByClassName("equation-btn");
+      button.setAttribute("disabled", "");
     }
   }
 }
