@@ -32,8 +32,10 @@ function charClicked(event) {
 document.getElementById("clearInput").addEventListener("click", clearNum);
 document.getElementById("delete").addEventListener("click", deleteNum);
 
-function checkInput(inputValue) {
-  for (let i = 0; i <= inputValue.length; i++) {
+function checkInput(input) {
+  let inputValue = input.value;
+  let inputLength = inputValue.length;
+  for (let i = 0; i <= inputLength; i++) {
     if (
       inputValue === "+" ||
       inputValue === "-" ||
