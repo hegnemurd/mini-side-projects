@@ -21,8 +21,26 @@ function charClicked(event) {
   let numValue = event.target.getAttribute("data-character");
   document.getElementById("calculation").value += numValue;
   console.log(numValue);
-  return numValue;
   // get the value of the data-number attribute
+  let inputLength = numValue.length;
+  for (let i = 0; i <= inputLength; i++) {
+    if (
+      numValue === "+" ||
+      numValue === "-" ||
+      numValue === "/" ||
+      numValue === "*"
+    ) {
+      document.getElementById("plus").disabled = true;
+      document.getElementById("minus").disabled = true;
+      document.getElementById("divide").disabled = true;
+      document.getElementById("multiply").disabled = true;
+      // let buttons = document.getElementsByClassName("equation-btn");
+      // for (element in buttons) {
+      //   element.disabled = true;
+      // }
+    }
+  }
+  return numValue;
 }
 
 // document.getElementById("add").addEventListener("click", addNum);
@@ -32,21 +50,21 @@ function charClicked(event) {
 document.getElementById("clearInput").addEventListener("click", clearNum);
 document.getElementById("delete").addEventListener("click", deleteNum);
 
-function checkInput(input) {
-  let inputValue = input.value;
-  let inputLength = inputValue.length;
-  for (let i = 0; i <= inputLength; i++) {
-    if (
-      inputValue === "+" ||
-      inputValue === "-" ||
-      inputValue === "/" ||
-      inputValue === "*"
-    ) {
-      let button = document.getElementsByClassName("equation-btn");
-      button.setAttribute("disabled", "");
-    }
-  }
-}
+// function checkInput(event, value) {
+//   // let inputValue = input.value;
+//   let inputLength = value.length;
+//   for (let i = 0; i <= inputLength; i++) {
+//     if (
+//       value === "+" ||
+//       value === "-" ||
+//       value === "/" ||
+//       value === "*"
+//     ) {
+//       let button = document.getElementsByClassName("equation-btn");
+//       button.setAttribute("disabled", "");
+//     }
+//   }
+// }
 
 document.getElementById("equal-btn").addEventListener("click", equationValue);
 function equationValue(inputValue) {
