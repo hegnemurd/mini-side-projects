@@ -76,13 +76,18 @@ function equationValue(inputValue) {
   switch (inputValue) {
     case "+":
       result = number1 + number2;
+      return result;
     case "-":
       result = number1 + number2;
+      return result;
     case "/":
       result = number1 + number2;
+      return result;
     case "*":
       result = number1 + number2;
+      return result;
   }
+  console.log(result);
 }
 
 // function addNum(numValue) {
