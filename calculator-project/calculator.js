@@ -34,60 +34,56 @@ function charClicked(event) {
       document.getElementById("minus").disabled = true;
       document.getElementById("divide").disabled = true;
       document.getElementById("multiply").disabled = true;
-      // let buttons = document.getElementsByClassName("equation-btn");
-      // for (element in buttons) {
-      //   element.disabled = true;
-      // }
     }
   }
   return numValue;
 }
 
-// document.getElementById("add").addEventListener("click", addNum);
-// document.getElementById("subtract").addEventListener("click", subtractNum);
-// document.getElementById("divide").addEventListener("click", divideNum);
-// document.getElementById("multiply").addEventListener("click", multiNum);
 document.getElementById("clearInput").addEventListener("click", clearNum);
 document.getElementById("delete").addEventListener("click", deleteNum);
 
-// function checkInput(event, value) {
-//   // let inputValue = input.value;
-//   let inputLength = value.length;
-//   for (let i = 0; i <= inputLength; i++) {
-//     if (
-//       value === "+" ||
-//       value === "-" ||
-//       value === "/" ||
-//       value === "*"
-//     ) {
-//       let button = document.getElementsByClassName("equation-btn");
-//       button.setAttribute("disabled", "");
-//     }
-//   }
-// }
-
 document.getElementById("equal-btn").addEventListener("click", equationValue);
-function equationValue(inputValue) {
-  // for(i = 0; i <= inputValue; i++) {
-  //   switch ()
-  // }
-  // find the charater in inputVlaue
-
-  switch (inputValue) {
-    case "+":
+function equationValue(event) {
+  let numValue = event.target.getAttribute("data-character");
+  document.getElementById("calculation").value += numValue;
+  for (let i = 0; i <= inputLength; i++) {
+    if (numValue === "+") {
       result = number1 + number2;
-      return result;
-    case "-":
-      result = number1 + number2;
-      return result;
-    case "/":
-      result = number1 + number2;
-      return result;
-    case "*":
-      result = number1 + number2;
-      return result;
+      console.log(result);
+    } else if (numValue === "-") {
+      result = number1 - number2;
+      console.log(result);
+    } else if (numValue === "/") {
+      result = number1 / number2;
+      console.log(result);
+    } else if (numValue === "*") {
+      result = number1 * number2;
+      console.log(result);
+    }
   }
-  console.log(result);
+  return numValue;
+  // const operator = "+";
+  //   switch (operator) {
+  //     case "+":
+  //       result = number1 + number2;
+  //       console.log(result);
+  //       break;
+  //     case "-":
+  //       result = number1 + number2;
+  //       // return result;
+  //       console.log(result);
+  //       break;
+  //     case "/":
+  //       result = number1 + number2;
+  //       // return result;
+  //       console.log(result);
+  //       break;
+  //     case "*":
+  //       result = number1 + number2;
+  //       // return result;
+  //       console.log(result);
+  //       break;
+  //   }
 }
 
 // function addNum(numValue) {
