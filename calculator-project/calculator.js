@@ -47,8 +47,20 @@ function equationValue(event) {
   let numValue = event.target.getAttribute("data-character");
   document.getElementById("calculation").value += numValue;
   let inputLength = numValue.length;
-  // how to add input value prior character to number1
-  // how to add input value after character to number2
+  let result = 0;
+  let number1 = 0;
+  let number2 = 0;
+  // number then character then the input is empty and new number will be added
+  // when character is clicked then the numbers are equated
+  // 7 + => pressing these two would show =>
+  // 89 = => then pressing these would show =>
+  // 96
+  // --- how to add input value prior character to number1:
+  //
+  //
+  // --- how to add input value after character to number2
+  //
+  //
   for (let i = 0; i <= inputLength; i++) {
     if (numValue === "+") {
       result = number1 + number2;
