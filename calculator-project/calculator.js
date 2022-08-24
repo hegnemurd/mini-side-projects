@@ -46,6 +46,9 @@ document.getElementById("equal-btn").addEventListener("click", equationValue);
 function equationValue(event) {
   let numValue = event.target.getAttribute("data-character");
   document.getElementById("calculation").value += numValue;
+  let inputLength = numValue.length;
+  // how to add input value prior character to number1
+  // how to add input value after character to number2
   for (let i = 0; i <= inputLength; i++) {
     if (numValue === "+") {
       result = number1 + number2;
@@ -61,36 +64,9 @@ function equationValue(event) {
       console.log(result);
     }
   }
-  return numValue;
-  // const operator = "+";
-  //   switch (operator) {
-  //     case "+":
-  //       result = number1 + number2;
-  //       console.log(result);
-  //       break;
-  //     case "-":
-  //       result = number1 + number2;
-  //       // return result;
-  //       console.log(result);
-  //       break;
-  //     case "/":
-  //       result = number1 + number2;
-  //       // return result;
-  //       console.log(result);
-  //       break;
-  //     case "*":
-  //       result = number1 + number2;
-  //       // return result;
-  //       console.log(result);
-  //       break;
-  //   }
+  // return numValue;
+  console.log(numValue, result);
 }
-
-// function addNum(numValue) {
-//   let number = numValue;
-//   let addedNum = number + number;
-//   console.log(addedNum);
-// }
 
 function clearNum() {
   const input = document.getElementById("calculation");
