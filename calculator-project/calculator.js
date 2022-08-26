@@ -19,7 +19,10 @@ function charactersEventList() {
 
 function charClicked(event) {
   let numValue = event.target.getAttribute("data-character");
+  // let inputValue = document.getElementById("calculation").value;
   document.getElementById("calculation").value += numValue;
+  const input = document.getElementById("calculation");
+  // inputValue += numValue;
   console.log(numValue);
   // get the value of the data-number attribute
   let inputLength = numValue.length;
@@ -36,6 +39,7 @@ function charClicked(event) {
       document.getElementById("multiply").disabled = true;
     }
   }
+  input.value = "";
   return numValue;
 }
 
@@ -45,7 +49,8 @@ document.getElementById("delete").addEventListener("click", deleteNum);
 document.getElementById("equal-btn").addEventListener("click", equationValue);
 function equationValue(event) {
   let numValue = event.target.getAttribute("data-character");
-  document.getElementById("calculation").value += numValue;
+  const inputValue = document.getElementById("calculation").value;
+  inputValue += numValue;
   let inputLength = numValue.length;
   let result = 0;
   let number1 = 0;
@@ -55,12 +60,6 @@ function equationValue(event) {
   // 7 + => pressing these two would show =>
   // 89 = => then pressing these would show =>
   // 96
-  // --- how to add input value prior character to number1:
-  //
-  //
-  // --- how to add input value after character to number2
-  //
-  //
   for (let i = 0; i <= inputLength; i++) {
     if (numValue === "+") {
       result = number1 + number2;
@@ -76,6 +75,8 @@ function equationValue(event) {
       console.log(result);
     }
   }
+  inputValue = "";
+
   // return numValue;
   console.log(numValue, result);
 }
