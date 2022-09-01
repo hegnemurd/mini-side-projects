@@ -49,17 +49,12 @@ document.getElementById("delete").addEventListener("click", deleteNum);
 document.getElementById("equal-btn").addEventListener("click", equationValue);
 function equationValue(event) {
   let numValue = event.target.getAttribute("data-character");
-  const inputValue = document.getElementById("calculation").value;
+  let inputValue = document.getElementById("calculation").value;
   inputValue += numValue;
   let inputLength = numValue.length;
   let result = 0;
   let number1 = 0;
   let number2 = 0;
-  // number then character then the input is empty and new number will be added
-  // when character is clicked then the numbers are equated
-  // 7 + => pressing these two would show =>
-  // 89 = => then pressing these would show =>
-  // 96
   for (let i = 0; i <= inputLength; i++) {
     if (numValue === "+") {
       result = number1 + number2;
@@ -74,11 +69,9 @@ function equationValue(event) {
       result = number1 * number2;
       console.log(result);
     }
+    console.log(numValue, result);
   }
   inputValue = "";
-
-  // return numValue;
-  console.log(numValue, result);
 }
 
 function clearNum() {
@@ -86,4 +79,7 @@ function clearNum() {
   input.value = "";
 }
 
-function deleteNum(inputValue) {}
+function deleteNum(inputValue) {
+  const input = document.getElementById("calculation");
+  input.value = "";
+}
