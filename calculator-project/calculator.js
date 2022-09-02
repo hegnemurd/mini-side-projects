@@ -37,9 +37,9 @@ function charClicked(event) {
       document.getElementById("minus").disabled = true;
       document.getElementById("divide").disabled = true;
       document.getElementById("multiply").disabled = true;
+      input.value = "";
     }
   }
-  input.value = "";
   return numValue;
 }
 
@@ -56,20 +56,21 @@ function equationValue(event) {
   let number1 = 0;
   let number2 = 0;
   for (let i = 0; i <= inputLength; i++) {
-    if (numValue === "+") {
-      result = number1 + number2;
-      console.log(result);
-    } else if (numValue === "-") {
-      result = number1 - number2;
-      console.log(result);
-    } else if (numValue === "/") {
-      result = number1 / number2;
-      console.log(result);
-    } else if (numValue === "*") {
-      result = number1 * number2;
-      console.log(result);
-    }
-    console.log(numValue, result);
+    // console.log(numValue, result);
+    numValue = value[i];
+  }
+  if (numValue === "+") {
+    result = number1 + number2;
+    console.log(result);
+  } else if (numValue === "-") {
+    result = number1 - number2;
+    console.log(result);
+  } else if (numValue === "/") {
+    result = number1 / number2;
+    console.log(result);
+  } else if (numValue === "*") {
+    result = number1 * number2;
+    console.log(result);
   }
   inputValue = "";
 }
