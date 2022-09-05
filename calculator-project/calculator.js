@@ -48,31 +48,54 @@ document.getElementById("delete").addEventListener("click", deleteNum);
 
 document.getElementById("equal-btn").addEventListener("click", equationValue);
 function equationValue(event) {
-  let numValue = event.target.getAttribute("data-character");
+  let character = event.target.getAttribute("data-character");
   let inputValue = document.getElementById("calculation").value;
-  inputValue += numValue;
-  let inputLength = numValue.length;
+  let inputLength = inputValue.length;
   let result = 0;
   let number1 = 0;
   let number2 = 0;
+  console.log(inputValue);
+
   for (let i = 0; i <= inputLength; i++) {
-    // console.log(numValue, result);
-    numValue = value[i];
+    if (character === "+") {
+      result = number1 + number2;
+      console.log(result);
+    } else if (character === "-") {
+      result = number1 - number2;
+      console.log(result);
+    } else if (character === "/") {
+      result = number1 / number2;
+      console.log(result);
+    } else if (character === "*") {
+      result = number1 * number2;
+      console.log(result);
+    }
   }
-  if (numValue === "+") {
-    result = number1 + number2;
-    console.log(result);
-  } else if (numValue === "-") {
-    result = number1 - number2;
-    console.log(result);
-  } else if (numValue === "/") {
-    result = number1 / number2;
-    console.log(result);
-  } else if (numValue === "*") {
-    result = number1 * number2;
-    console.log(result);
-  }
-  inputValue = "";
+
+  // console.log(inputValue);
+  // inputValue += numValue;
+  // let inputLength = numValue.length;
+  // let result = 0;
+  // let number1 = 0;
+  // let number2 = 0;
+  // for (let i = 0; i <= inputLength; i++) {
+  //   numValue = value[i];
+  //   console.log(numValue);
+  // }
+  // if (character === "+") {
+  //   result = number1 + number2;
+  //   console.log(result);
+  // } else if (character === "-") {
+  //   result = number1 - number2;
+  //   console.log(result);
+  // } else if (character === "/") {
+  //   result = number1 / number2;
+  //   console.log(result);
+  // } else if (character === "*") {
+  //   result = number1 * number2;
+  //   console.log(result);
+  // }
+  // inputValue = "";
 }
 
 function clearNum() {
