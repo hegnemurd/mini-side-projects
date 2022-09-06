@@ -49,19 +49,20 @@ document
 let number = 0;
 function equationValue(event) {
   let character = event.target.getAttribute("data-operation");
-
+  let numberValue = event.target.getAttribute("data-number");
   if (character === "+") {
-    result += +number;
+    result += +numberValue;
   } else if (character === "-") {
     result = number1 - number2;
   } else if (character === "/") {
     result = number1 / number2;
   } else if (character === "*") {
     result = number1 * number2;
-  } else {
-    // its a number here
-    number = character;
   }
+  // else {
+  //   // its a number here
+  //   number = numberValue;
+  // }
   // console.log(result);
 }
 
