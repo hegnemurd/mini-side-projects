@@ -48,10 +48,11 @@ document
 
 let number = 0;
 function equationValue(event) {
+  let newResult = 0;
   let character = event.target.getAttribute("data-operation");
   let numberValue = event.target.getAttribute("data-number");
   if (character === "+") {
-    result += +numberValue;
+    return (result = +numberValue + result);
   } else if (character === "-") {
     result = number1 - number2;
   } else if (character === "/") {
